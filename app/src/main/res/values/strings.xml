@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HW13_Maktab67_part1</string>
+    <string name="name">Name</string>
+    <string name="family">Family</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="username">Username</string>
+</resources>

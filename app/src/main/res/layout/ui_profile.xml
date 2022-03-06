@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.example.hw13_maktab67_part1.profile.ProfileUiState"/>
+        <import type="androidx.lifecycle.LiveData"/>
+        <variable
+            name="uiState"
+            type="ProfileUiState" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/getProfileLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/getImageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/getName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread"
+                tools:src="@drawable/profile" />
+
+            <EditText
+                android:id="@+id/getName"
+                android:text="@={uiState.name}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="@string/name"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/getFamily"
+                app:layout_constraintTop_toBottomOf="@+id/getImageView"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <EditText
+                android:id="@+id/getFamily"
+                android:text="@={uiState.family}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="@string/family"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/getEmail"
+                app:layout_constraintTop_toBottomOf="@+id/getName"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <EditText
+                android:id="@+id/getEmail"
+                android:text="@={uiState.email}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="@string/email"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/getPhoneNumber"
+                app:layout_constraintTop_toBottomOf="@+id/getFamily"
+                tools:layout_editor_absoluteX="-16dp" />
+
+            <EditText
+                android:id="@+id/getPhoneNumber"
+                android:text="@={uiState.phoneNumber}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="@string/phone_number"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/getUsername"
+                app:layout_constraintTop_toBottomOf="@+id/getEmail"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <EditText
+                android:id="@+id/getUsername"
+                android:text="@={uiState.username}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="@string/username"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/getPhoneNumber"
+                tools:layout_editor_absoluteX="16dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/showProfileLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/showImage"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/showName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/showName"
+                android:text="@={uiState.name}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/showFamily"
+                app:layout_constraintTop_toBottomOf="@+id/showImage"
+                tools:text="@string/name" />
+
+            <TextView
+                android:id="@+id/showFamily"
+                android:text="@={uiState.family}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/showEmail"
+                app:layout_constraintTop_toBottomOf="@+id/showName"
+                tools:text="@string/family" />
+
+            <TextView
+                android:id="@+id/showEmail"
+                android:text="@={uiState.email}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/showPhoneNumber"
+                app:layout_constraintTop_toBottomOf="@+id/showFamily"
+                tools:text="@string/email" />
+
+            <TextView
+                android:id="@+id/showPhoneNumber"
+                android:text="@={uiState.phoneNumber}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/showUsername"
+                app:layout_constraintTop_toBottomOf="@+id/showEmail"
+                tools:text="@string/phone_number" />
+
+            <TextView
+                android:id="@+id/showUsername"
+                android:text="@={uiState.username}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/showPhoneNumber"
+                tools:text="@string/username" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
