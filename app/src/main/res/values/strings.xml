@@ -5,4 +5,11 @@
     <string name="email">Email</string>
     <string name="phone_number">Phone Number</string>
     <string name="username">Username</string>
+    <string name="profile">Profile</string>
+    <string name="favorite">Favorite</string>
+    <string name="coming_soon">Coming Soon</string>
+    <string name="home">Home</string>
+    <string name="title">Title</string>
+    <string name="url">Url</string>
+    <string name="register">Register</string>
 </resources>

@@ -3,11 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/majid/Desktop/android/01 backup/HW13_Maktab67_part1/app/src/main/res/layout-land/ui_profile.xml" value="0.5614617940199336" />
+        <entry key="..\:/Users/majid/Desktop/android/01 backup/HW13_Maktab67_part1/app/src/main/res/layout/ui_profile.xml" value="0.1" />
+        <entry key="..\:/Users/majid/Desktop/android/06 home work/HW13_Maktab67_part1/app/src/main/res/drawable/like.xml" value="0.2515" />
+        <entry key="..\:/Users/majid/Desktop/android/06 home work/HW13_Maktab67_part1/app/src/main/res/drawable/like_selector.xml" value="0.1105" />
+        <entry key="..\:/Users/majid/Desktop/android/06 home work/HW13_Maktab67_part1/app/src/main/res/drawable/unlike.xml" value="0.2515" />
+        <entry key="..\:/Users/majid/Desktop/android/06 home work/HW13_Maktab67_part1/app/src/main/res/layout-land/ui_favorite.xml" value="0.5791666666666667" />
+        <entry key="..\:/Users/majid/Desktop/android/06 home work/HW13_Maktab67_part1/app/src/main/res/layout-land/ui_home.xml" value="0.2745664739884393" />
         <entry key="..\:/Users/majid/Desktop/android/06 home work/HW13_Maktab67_part1/app/src/main/res/layout-land/ui_profile.xml" value="0.1" />
         <entry key="..\:/Users/majid/Desktop/android/06 home work/HW13_Maktab67_part1/app/src/main/res/layout/activity_main.xml" value="0.3625" />
-        <entry key="..\:/Users/majid/Desktop/android/06 home work/HW13_Maktab67_part1/app/src/main/res/layout/home_ui_item_sample.xml" value="0.3625" />
-        <entry key="..\:/Users/majid/Desktop/android/06 home work/HW13_Maktab67_part1/app/src/main/res/layout/ui_home.xml" value="0.1" />
+        <entry key="..\:/Users/majid/Desktop/android/06 home work/HW13_Maktab67_part1/app/src/main/res/layout/comingsoon_ui_item_sample.xml" value="0.37552083333333336" />
+        <entry key="..\:/Users/majid/Desktop/android/06 home work/HW13_Maktab67_part1/app/src/main/res/layout/favorite_ui_item_sample.xml" value="0.37552083333333336" />
+        <entry key="..\:/Users/majid/Desktop/android/06 home work/HW13_Maktab67_part1/app/src/main/res/layout/home_ui_item_sample.xml" value="0.37552083333333336" />
+        <entry key="..\:/Users/majid/Desktop/android/06 home work/HW13_Maktab67_part1/app/src/main/res/layout/ui_comingsoon.xml" value="0.37552083333333336" />
+        <entry key="..\:/Users/majid/Desktop/android/06 home work/HW13_Maktab67_part1/app/src/main/res/layout/ui_favorite.xml" value="0.37552083333333336" />
+        <entry key="..\:/Users/majid/Desktop/android/06 home work/HW13_Maktab67_part1/app/src/main/res/layout/ui_home.xml" value="0.37552083333333336" />
         <entry key="..\:/Users/majid/Desktop/android/06 home work/HW13_Maktab67_part1/app/src/main/res/layout/ui_profile.xml" value="0.1" />
+        <entry key="..\:/Users/majid/Desktop/android/06 home work/HW13_Maktab67_part1/app/src/main/res/menu/menu.xml" value="0.37552083333333336" />
       </map>
     </option>
   </component>

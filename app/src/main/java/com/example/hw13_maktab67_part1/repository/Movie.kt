@@ -1,6 +1,4 @@
-package com.example.hw13_maktab67_part1.delet
-
-import androidx.lifecycle.MutableLiveData
+package com.example.hw13_maktab67_part1.repository
 
 data class Movie(
     val name: String,

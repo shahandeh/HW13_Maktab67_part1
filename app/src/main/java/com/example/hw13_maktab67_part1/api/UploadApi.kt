@@ -10,10 +10,10 @@ import retrofit2.http.Path
 interface UploadApi {
 
     @Multipart
-    @POST("{username}")
+    @POST("users/{username}")
     fun uploadImage(
         @Path("username") username : String,
         @Part image : MultipartBody.Part
-    ) : Call<String>
+    ) : Call<Any>
 
 }

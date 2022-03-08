@@ -26,3 +26,9 @@ fun Bitmap.convert(): String {
 fun Uri.convert(context: Context): ByteArray? {
     return context.contentResolver.openInputStream(this)?.readBytes()
 }
+
+fun Bitmap.arrayConvert(): ByteArray{
+    val stream = ByteArrayOutputStream()
+    this.compress(Bitmap.CompressFormat.PNG, 10, stream)
+    return stream.toByteArray()
+}

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <import type="com.example.hw13_maktab67_part1.profile.ProfileUiState"/>
+        <import type="com.example.hw13_maktab67_part1.ui.profile.ProfileUiState"/>
         <import type="androidx.lifecycle.LiveData"/>
         <variable
             name="uiState"
@@ -32,7 +32,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_chainStyle="spread"
-                tools:src="@drawable/profile" />
+                android:src="@drawable/profile" />
 
             <EditText
                 android:id="@+id/getName"
@@ -92,17 +92,25 @@
 
             <EditText
                 android:id="@+id/getUsername"
-                android:text="@={uiState.username}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:hint="@string/username"
+                android:text="@={uiState.username}"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/register"
                 app:layout_constraintTop_toBottomOf="@+id/getPhoneNumber"
                 tools:layout_editor_absoluteX="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="@string/register"
+                android:textAllCaps="false"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -126,7 +134,7 @@
 
             <TextView
                 android:id="@+id/showName"
-                android:text="@={uiState.name}"
+                android:text="@{uiState.name}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -138,7 +146,7 @@
 
             <TextView
                 android:id="@+id/showFamily"
-                android:text="@={uiState.family}"
+                android:text="@{uiState.family}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -150,7 +158,7 @@
 
             <TextView
                 android:id="@+id/showEmail"
-                android:text="@={uiState.email}"
+                android:text="@{uiState.email}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -162,7 +170,7 @@
 
             <TextView
                 android:id="@+id/showPhoneNumber"
-                android:text="@={uiState.phoneNumber}"
+                android:text="@{uiState.phoneNumber}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -174,7 +182,7 @@
 
             <TextView
                 android:id="@+id/showUsername"
-                android:text="@={uiState.username}"
+                android:text="@{uiState.username}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"

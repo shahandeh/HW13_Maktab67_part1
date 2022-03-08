@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeUi">
+
+    <fragment
+        android:id="@+id/favoriteUi"
+        android:name="com.example.hw13_maktab67_part1.ui.favorite.FavoriteUi"
+        android:label="FavoriteUi" />
+    <fragment
+        android:id="@+id/homeUi"
+        android:name="com.example.hw13_maktab67_part1.ui.home.HomeUi"
+        android:label="HomeUi" />
+    <fragment
+        android:id="@+id/profileUi"
+        android:name="com.example.hw13_maktab67_part1.ui.profile.ProfileUi"
+        android:label="ProfileUi" />
+    <fragment
+        android:id="@+id/comingSoonUi"
+        android:name="com.example.hw13_maktab67_part1.ui.comingsoon.ComingSoonUi"
+        android:label="ComingSoonUi" />
+</navigation>

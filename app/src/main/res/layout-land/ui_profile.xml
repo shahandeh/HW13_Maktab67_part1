@@ -4,8 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <import type="com.example.hw13_maktab67_part1.profile.ProfileUiState"/>
+
+        <import type="com.example.hw13_maktab67_part1.ui.profile.ProfileUiState" />
         <import type="androidx.lifecycle.LiveData"/>
+
         <variable
             name="uiState"
             type="ProfileUiState" />
@@ -30,15 +32,16 @@
                 android:src="@drawable/profile"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.497" />
 
             <EditText
-                android:text="@={uiState.name}"
                 android:id="@+id/getName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:hint="@string/name"
+                android:text="@={uiState.name}"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 android:textSize="16sp"
@@ -49,12 +52,12 @@
                 tools:layout_editor_absoluteX="0dp" />
 
             <EditText
-                android:text="@={uiState.family}"
                 android:id="@+id/getFamily"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:hint="@string/family"
+                android:text="@={uiState.family}"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 android:textSize="16sp"
@@ -65,12 +68,12 @@
                 tools:layout_editor_absoluteX="0dp" />
 
             <EditText
-                android:text="@={uiState.email}"
                 android:id="@+id/getEmail"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:hint="@string/email"
+                android:text="@={uiState.email}"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 android:textSize="16sp"
@@ -82,11 +85,11 @@
 
             <EditText
                 android:id="@+id/getPhoneNumber"
-                android:text="@={uiState.phoneNumber}"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:hint="@string/phone_number"
+                android:text="@={uiState.phoneNumber}"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 android:textSize="16sp"
@@ -98,19 +101,28 @@
 
             <EditText
                 android:id="@+id/getUsername"
-                android:text="@={uiState.username}"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:hint="@string/username"
+                android:text="@={uiState.username}"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/register"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/getImageView"
-                app:layout_constraintTop_toBottomOf="@+id/getPhoneNumber"
-                tools:layout_editor_absoluteX="16dp" />
+                app:layout_constraintTop_toBottomOf="@+id/getPhoneNumber" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/register"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/register"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/getImageView" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -133,10 +145,10 @@
 
             <TextView
                 android:id="@+id/showName"
-                android:text="@={uiState.username}"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:text="@={uiState.username}"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toTopOf="@+id/showFamily"
@@ -147,10 +159,10 @@
 
             <TextView
                 android:id="@+id/showFamily"
-                android:text="@={uiState.family}"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:text="@={uiState.family}"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toTopOf="@+id/showEmail"
@@ -161,10 +173,10 @@
 
             <TextView
                 android:id="@+id/showEmail"
-                android:text="@={uiState.email}"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:text="@={uiState.email}"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toTopOf="@+id/showPhoneNumber"
@@ -175,10 +187,10 @@
 
             <TextView
                 android:id="@+id/showPhoneNumber"
-                android:text="@={uiState.phoneNumber}"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:text="@={uiState.phoneNumber}"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toTopOf="@+id/showUsername"
@@ -189,10 +201,10 @@
 
             <TextView
                 android:id="@+id/showUsername"
-                android:text="@={uiState.username}"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:text="@={uiState.username}"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
