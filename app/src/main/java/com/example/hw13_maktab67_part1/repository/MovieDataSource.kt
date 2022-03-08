@@ -2,7 +2,7 @@ package com.example.hw13_maktab67_part1.repository
 
 
 object MovieDataSource {
-    private var movieA = Movie (
+    private var movieA = Movie(
         "The Pianist",
         false,
         "https://static.namava.ir/Content/Upload/Images/5fe6215e-3fe1-442d-a311-8c5f7b1c261f.jpg?anchor=middlecenter&crop=auto&scale=both&w=200&h=294 1x,https://static.namava.ir/Content/Upload/Images/5fe6215e-3fe1-442d-a311-8c5f7b1c261f.jpg?anchor=middlecenter&crop=auto&scale=both&w=400&h=588 2x"
